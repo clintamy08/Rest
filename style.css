@@ -1,0 +1,320 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 16px;
+  color: #9d0e3d;
+  background-color:#c6d6b0;
+  font-family: 'Oxygen', sans-serif;
+}
+/* Navigation */
+.navbar a {
+  color: white;
+  text-decoration: none;
+
+}
+.navbar a:hover {
+  background: :#8ab186;
+}
+.navbar {
+  display: grid;
+  grid-template-columns:6.25% 6.25% 6.25% 6.25% 75% ;
+  grid-template-rows: 45px 45px 45px;
+  grid-template-areas:
+  "logo logo logo logo logo"
+  "logo logo logo logo logo"
+  "home menu about awards .";
+  background: gray;
+  color: white;
+  justify-items: center;
+  align-items: center;
+}
+.navbar span,h1,a{
+  text-align: center;
+
+}
+.logo {
+  grid-area: logo;
+
+}
+.logo h1{
+  color:#8ab186;
+  font-family: Ubuntu;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: overline underline;
+}
+span{
+  color:#e6efb9;
+}
+.home {
+  grid-area: home;
+}
+.home:hover {
+  background-color:#8ab186;
+  padding: 14px 15px;
+
+}
+.menu {
+  grid-area: menu;
+
+}
+.menu:hover {
+  background-color:#8ab186;
+  padding: 14px 15px;
+
+}
+.about {
+  grid-area: about;
+
+
+}
+.about:hover {
+  background-color:#8ab186;
+  padding: 14px 15px;
+
+}
+.awards {
+  grid-area: awards;
+
+
+}
+.awards:hover {
+  background-color:#8ab186;
+  padding: 14px 15px;
+
+}
+/* Navigation */
+
+/* Content */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 220px 220px 220px;
+  grid-template-areas:
+  'main-image main-image main-image'
+  'main-image main-image main-image'
+  'small-image1 small-image2 small-image3';
+  grid-gap:20px;
+  padding:20px 20px 20px 20px;
+}
+.content span1{
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-size: 40px;
+  text-decoration: overline underline;
+
+}
+.main-image{
+  grid-area:main-image;
+}
+.small-image1{
+  grid-area:small-image1;
+}
+.small-image2{
+  grid-area:small-image2;
+}
+.small-image3{
+  grid-area:small-image3;
+
+}
+/* Content */
+
+/* Menu */
+.content-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 270px 270px 270px;
+  grid-template-areas:
+  'breakfast'
+  'lunch'
+  'supper';
+   grid-gap:60px;
+   padding: 20px 20px 20px 20px;
+}
+/* Menu */
+/* Awards */
+h2 {
+  text-align: center;
+}
+.paragraph {
+  color: white;
+  text-align: center;
+}
+/* Awards */
+/* About  */
+.aboutpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 500px;
+  grid-template-areas:
+  'main-image main-image main-image'
+  'main-image main-image main-image';
+  padding: 20px 20px 20px 20px;
+}
+.awardspage{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 500px;
+  grid-template-areas:
+  'main-image main-image main-image'
+  'main-image main-image main-image' ;
+  padding: 20px 20px 20px 20px;
+}
+.aboutpage span1{
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-size: 40px;
+  text-decoration: overline underline;
+
+}
+.main-image{
+  grid-area:main-image;
+}
+.small-image1{
+  grid-area:small-image1;
+}
+.small-image2{
+  grid-area:small-image2;
+}
+.small-image3{
+  grid-area:small-image3;
+}
+p{
+  color:white;
+  text-align: center;
+}
+
+
+
+/* About */
+
+/* Footer */
+footer{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 160px 80px;
+  grid-template-areas:
+  "hours address testimonials"
+  "admin admin admin";
+  color: white;
+  background-color: gray;
+  text-align: center;
+  margin-top: 20px;
+  align-items: center;
+  justify-items: center;
+  font-size: 19px;
+  padding-left: 10px;
+
+}
+footer span{
+  font-size: 20px;
+  color:#8ab186;
+}
+.hours{
+  grid-area: hours;
+}
+.address{
+  grid-area: address;
+
+}
+.testimonials{
+  grid-area: testimonials;
+
+}
+.admin{
+  grid-area: admin;
+    color:#e6efb9;
+
+}
+/* Footer */
+
+/* MEDIA Queries */
+@media(max-width: 1000px) {
+  .navbar {
+    grid-template-rows: repeat(6, 33.3px) ;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "logo"
+    "logo"
+    "home"
+    "menu"
+    "about"
+    "awards";
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+@media(max-width:850px){
+  .content{
+  grid-template-rows: 270px 270px 270px 270px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "main-image"
+  "small-image1"
+  "small-image2"
+  "small-image3"
+  "small-image3";
+  }
+  .aboutpage{
+    grid-template-rows: 270px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "main-image";
+  }
+  .awardspage{
+    grid-template-rows: 270px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "main-image";
+  }
+  .content .small-image1, .small-image2, .small-image3{
+    margin: 10px 10px 10px 10px;
+      }
+    .aboutpage .small-image1, .small-image2, .small-image3{
+        margin: 10px 10px 10px 10px;
+      }
+        @media(max-width:800px){
+          .content-menu{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              'breakfast'
+              'image1'
+              'image2'
+              'image3'
+              'lunch'
+              'image4'
+              'image5'
+              'image6'
+              'supper'
+              'image7'
+              'image8'
+              'image9';
+             grid-gap:700px;
+             padding: 20px 20px 20px 20px;
+          }
+        }
+  }
+
+}
+/* Footer media query */
+@media(max-width:855px){
+  footer{
+    grid-template-rows:100px 100px 100px 100px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "hours"
+    "address"
+    "testimonials"
+    "admin";
+    font-size: 15px;
+  }
+
+}
