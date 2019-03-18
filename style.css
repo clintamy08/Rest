@@ -133,8 +133,26 @@ span{
   'breakfast'
   'lunch'
   'supper';
-   grid-gap:60px;
-   padding: 20px 20px 20px 20px;
+  grid-gap:60px;
+  padding: 20px 20px 20px 20px;
+}
+.content-menu .btn{
+  display: block;
+  background: black;
+  color:white;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border:0;
+  grid-template-columns: 1fr;
+  display: block;
+  text-align: center;
+  margin: auto;
+  float:left;
+}
+.content-menu p{
+  font-style: italic;
+  font-weight: bold;
+  color: green;
 }
 /* Menu */
 /* Awards */
@@ -230,7 +248,7 @@ footer span{
 }
 .admin{
   grid-area: admin;
-    color:#e6efb9;
+  color:#e6efb9;
 
 }
 /* Footer */
@@ -251,56 +269,57 @@ footer span{
     align-items: center;
     text-align: center;
   }
-@media(max-width:850px){
-  .content{
-  grid-template-rows: 270px 270px 270px 270px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  "main-image"
-  "small-image1"
-  "small-image2"
-  "small-image3"
-  "small-image3";
-  }
-  .aboutpage{
-    grid-template-rows: 270px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "main-image";
-  }
-  .awardspage{
-    grid-template-rows: 270px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "main-image";
-  }
-  .content .small-image1, .small-image2, .small-image3{
-    margin: 10px 10px 10px 10px;
-      }
+  @media(max-width:850px){
+    .content{
+      grid-template-rows: 270px 270px 270px 270px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "main-image"
+      "small-image1"
+      "small-image2"
+      "small-image3"
+      "small-image3";
+    }
+    .aboutpage{
+      grid-template-rows: 270px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "main-image";
+    }
+    .awardspage{
+      grid-template-rows: 270px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "main-image";
+    }
+    .content .small-image1, .small-image2, .small-image3{
+      margin: 10px 10px 10px 10px;
+    }
     .aboutpage .small-image1, .small-image2, .small-image3{
-        margin: 10px 10px 10px 10px;
+      margin: 10px 10px 10px 10px;
+    }
+    @media(max-width:800px){
+      .content-menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'breakfast'
+        'image1'
+        'image2'
+        'image3'
+        'lunch'
+        'image4'
+        'image5'
+        'image6'
+        'supper'
+        'image7'
+        'image8'
+        'image9';
+        grid-gap:700px;
+        padding: 40px 40px 40px 40px;
+        height:2900px;
       }
-        @media(max-width:800px){
-          .content-menu{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-areas:
-              'breakfast'
-              'image1'
-              'image2'
-              'image3'
-              'lunch'
-              'image4'
-              'image5'
-              'image6'
-              'supper'
-              'image7'
-              'image8'
-              'image9';
-             grid-gap:700px;
-             padding: 20px 20px 20px 20px;
-          }
-        }
+    }
   }
 
 }
